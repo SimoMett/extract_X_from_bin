@@ -36,4 +36,4 @@ for i in range(occurrences.__len__()):
     output = "file_" + i.__str__() + ".wav"
     extract(data, occurrences[i], occurrences[i] + sizes[i], output)
 
-print(sizes)
+# print(sizes)
