@@ -29,10 +29,11 @@ for i in range(count_of_assets):
     assetSize = int.from_bytes(assetsInfoSection[i: i + 4], byteorder='little')
     assetAbsolutePos = int.from_bytes(assetsInfoSection[i + 4: i + 8], byteorder='little')
     occurrences.append([assetSize, assetAbsolutePos])
+    print([assetSize, assetAbsolutePos])
 
 print("I have found", occurrences.__len__(), "occurrences")
 
 # extract them all
 for i in range(occurrences.__len__()):
     output = "file_" + i.__str__() + ".unk"
-    extract(data, occurrences[i][1], occurrences[i][0] + occurrences[i][1], output)
+    #extract(data, occurrences[i][1], occurrences[i][0] + occurrences[i][1], output)
